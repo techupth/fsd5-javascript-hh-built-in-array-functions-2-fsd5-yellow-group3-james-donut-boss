@@ -375,4 +375,59 @@ const bills = [
 
 // Start coding here
 
-const totalPaidByLocation;
+const totalPaidByLocation = bills.reduce((acc, curr) => {
+    acc[curr.location] = (acc[curr.location] || 0) + curr.total;
+    return acc;
+}, {});
+
+console.log(totalPaidByLocation)
+
+
+
+
+/*
+let a = [{
+    car: "toyota",
+    num: 2
+},
+{
+    car: "benz",
+    num: 3
+},
+{
+    car: "toyota",
+    num: 3
+},
+{
+    car: "toyota",
+    num: 1
+},]
+const b = a.reduce((acc, curr) => {
+    acc
+    curr
+
+    acc[curr.car] = (acc[curr.car] || 0) + curr.num;
+        //1. (acc[curr.car] || 0) => ตรวจสอบว่า acc[curr.car] มีค่าหรือไม่:
+        //1.1 ถ้า acc มี property ที่ชื่อเป็น curr.car อยู่แล้ว ค่านั้นจะถูกใช้
+        //1.2 ถ้าไม่มี property นี้ หรือค่าที่ได้มีค่าเป็น undefined จะให้ค่าเริ่มต้นเป็น 0
+        //2. (acc[curr.car] || 0) + curr.num => บวก curr.num:
+        //2.1 เมื่อได้ค่าจากขั้นตอนที่ 1 แล้ว, นำ curr.num มาบวกกับค่านั้น
+        //3. acc[curr.car] = (acc[curr.car] || 0) + curr.num => กำหนดค่าให้ acc[curr.car]:
+        // 3.1 นำผลลัพธ์จากขั้นตอนที่ 2 มากำหนดค่าให้กับ acc[curr.car]
+
+    console.log(curr.car)
+    console.log(acc[curr.car])
+    console.log(acc[curr.car] || 0)
+    console.log(curr.num)
+    acc
+    
+    return acc;
+}, {});
+console.log(b);
+*/ //ตัวอย่างลองทำดูเอง
+
+
+
+
+
+

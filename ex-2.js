@@ -375,4 +375,19 @@ const bills = [
 
 // Start coding here
 
-const newBills;
+const newBills = bills.filter((cutNullMember) => {
+  return cutNullMember.member !== null;
+});
+
+console.log(newBills);
+
+
+/*
+let cutNullMember = function(memberInbill){
+  return memberInbill.member !== null;
+}
+
+const newBills = bills.filter(cutNullMember);
+console.log(newBills);
+*/
+//อีกวิธีทำ

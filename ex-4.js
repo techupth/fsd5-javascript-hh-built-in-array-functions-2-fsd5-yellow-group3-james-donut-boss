@@ -374,4 +374,29 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+let billsWithoutNull = bills.filter((cutNull) => {
+  return cutNull.member !== null;
+});
+
+const billMembers = billsWithoutNull.map((memberName) => {
+  return memberName.member.name
+});
+//console.log(billMembers);
+//console.log(billMembers.length);
+
+/*
+let sameName = function(cutSameName,index) {
+  return billMembers.indexOf(cutSameName) === index
+}
+
+let netMember = billMembers.filter(sameName);
+console.log(netMember);
+console.log(netMember.length)
+*/ //อีกวิธีทำ
+
+
+ const totalMembers = billMembers.filter((cutSameName,index) => {
+  return billMembers.indexOf(cutSameName) === index
+});
+console.log(totalMembers);
+console.log(totalMembers.length);
