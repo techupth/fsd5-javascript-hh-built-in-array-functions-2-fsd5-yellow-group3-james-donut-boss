@@ -386,3 +386,5 @@ const totalPaidByLocation = bills.reduce((acc, bill) => {
 }, {});
 
 
+
+
