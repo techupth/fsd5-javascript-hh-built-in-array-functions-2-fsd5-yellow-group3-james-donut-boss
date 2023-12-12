@@ -375,16 +375,12 @@ const bills = [
 
 // Start coding here
 const totalPaidByLocation = bills.reduce((acc, bill) => {
-    //ฺ ถ้ายังไม่มี key location ให้ set key เป็นชื่อจังหวัด และ value เป็น 0
-    if (!(bill.location in acc)) {
-        acc[bill.location] = 0;
-    }
-    // พอมาถึงตรงนี้ acc[bill.location] จะไม่เป็น undefined สามารถบวกค่าเช้าไปได้
-    acc[bill.location] += bill.total;
+    acc[bill.location] = (acc[bill.location] ?? 0) + bill.total;
     // return object (acc)umulator  
     return acc;
 }, {});
 
+console.log(totalPaidByLocation)
 
 
 
