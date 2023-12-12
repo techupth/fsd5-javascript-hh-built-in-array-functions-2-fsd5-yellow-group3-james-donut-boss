@@ -374,4 +374,24 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+/*
+function checkRepeatMember (allMember) {
+  let user = allMember.filter((repeatMember) => repeatMember.member !== null)
+  let i = user.map((c) => c.member["name"])
+  return i.filter((repeat,index) => i.indexOf(repeat) === index).length
+}
+
+const totalMembers = checkRepeatMember(bills);
+console.log (totalMembers)
+*/
+
+function checkRepeatMember (allMember) {
+  let user = allMember.filter((repeatMember) => repeatMember.member !== null)
+  console.log (user)
+  let i = user.map((c) => c.member["name"])
+  console.log (i)
+  return i = Array.from(new Set(i)) //การคัดชื่อให้ไม่ซ้ำกัน
+}
+
+const totalMembers = checkRepeatMember(bills);
+console.log (totalMembers)

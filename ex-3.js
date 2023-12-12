@@ -374,4 +374,10 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+function listNameMember (totalName) {
+  let memberNotNull = totalName.filter((nickName) => nickName.member !== null)
+  return memberNotNull.map((user) => user.member["name"])
+}
+
+const billMembers = listNameMember(bills);
+console.log (billMembers)
