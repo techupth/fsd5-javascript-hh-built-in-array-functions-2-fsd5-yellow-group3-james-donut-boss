@@ -374,4 +374,10 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+const billMembers = bills.reduce((acc, bill) => {
+  if (bill.member !== null) {
+    acc.push(bill.member.name);
+  }
+  return acc;
+}, [])
+console.log(billMembers)

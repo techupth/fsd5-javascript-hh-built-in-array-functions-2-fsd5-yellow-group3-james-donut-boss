@@ -370,8 +370,21 @@ const bills = [
       age: 26,
     },
     pointRate: 0.01,
-  },
+  }
 ];
 
 // Start coding here
-const totalMembers;
+const totalMembers = bills.reduce((acc, bill) => {
+  if (bill.member !== null && !acc.includes(bill.member.name)) {
+    acc.push(bill.member.name);
+  }
+  return acc;
+}, []).length;
+
+console.log(totalMembers)
+
+
+
+
+
+
