@@ -377,8 +377,8 @@ const bills = [
 /*
 function checkRepeatMember (allMember) {
   let user = allMember.filter((repeatMember) => repeatMember.member !== null)
-  let i = user.map((c) => c.member["name"])
-  return i.filter((repeat,index) => i.indexOf(repeat) === index).length
+  let onlyName = user.map((objectBills) => objectBills.member["name"])
+  return onlyName.filter((repeat,index) => onlyName.indexOf(repeat) === index).length
 }
 
 const totalMembers = checkRepeatMember(bills);
@@ -388,9 +388,9 @@ console.log (totalMembers)
 function checkRepeatMember (allMember) {
   let user = allMember.filter((repeatMember) => repeatMember.member !== null)
   console.log (user)
-  let i = user.map((c) => c.member["name"])
-  console.log (i)
-  return i = Array.from(new Set(i)) //การคัดชื่อให้ไม่ซ้ำกัน
+  let onlyName = user.map((objectBills) => objectBills.member["name"])
+  console.log (Rename)
+  return onlyName = Array.from(new Set(Rename)) //การคัดชื่อให้ไม่ซ้ำกัน
 }
 
 const totalMembers = checkRepeatMember(bills);
